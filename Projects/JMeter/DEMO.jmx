@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jmeterTestPlan version="1.2" properties="5.0" jmeter="5.3">
+  <hashTree>
+    <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="DEMO" enabled="true">
+      <stringProp name="TestPlan.comments">This test plan was created by the BlazeMeter converter v.2.3.17. Please contact support@blazemeter.com for further support.</stringProp>
+      <boolProp name="TestPlan.functional_mode">false</boolProp>
+      <boolProp name="TestPlan.serialize_threadgroups">false</boolProp>
+      <elementProp name="TestPlan.user_defined_variables" elementType="Arguments">
+        <collectionProp name="Arguments.arguments"/>
+      </elementProp>
+      <stringProp name="TestPlan.user_define_classpath"></stringProp>
+    </TestPlan>
+    <hashTree>
+      <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+        <collectionProp name="HeaderManager.headers">
+          <elementProp name="Origin" elementType="Header">
+            <stringProp name="Header.name">Origin</stringProp>
+            <stringProp name="Header.value">https://www-int2.jetblue.com</stringProp>
+          </elementProp>
+          <elementProp name="Accept" elementType="Header">
+            <stringProp name="Header.name">Accept</stringProp>
+            <stringProp name="Header.value">text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9</stringProp>
+          </elementProp>
+          <elementProp name="Upgrade-Insecure-Requests" elementType="Header">
+            <stringProp name="Header.name">Upgrade-Insecure-Requests</stringProp>
+            <stringProp name="Header.value">1</stringProp>
+          </elementProp>
+          <elementProp name="User-Agent" elementType="Header">
+            <stringProp name="Header.name">User-Agent</stringProp>
+            <stringProp name="Header.value">Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.106 Safari/537.36</stringProp>
+          </elementProp>
+          <elementProp name="Content-Type" elementType="Header">
+            <stringProp name="Header.name">Content-Type</stringProp>
+            <stringProp name="Header.value">application/x-www-form-urlencoded</stringProp>
+          </elementProp>
+        </collectionProp>
+      </HeaderManager>
+      <hashTree/>
+      <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+        <collectionProp name="Arguments.arguments">
+          <elementProp name="BASE_URL_1" elementType="Argument">
+            <stringProp name="Argument.name">BASE_URL_1</stringProp>
+            <stringProp name="Argument.value">bookqa2.jetblue.com</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+        </collectionProp>
+      </Arguments>
+      <hashTree/>
+      <ConfigTestElement guiclass="HttpDefaultsGui" testclass="ConfigTestElement" testname="HTTP Request Defaults" enabled="true">
+        <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+          <collectionProp name="Arguments.arguments"/>
+        </elementProp>
+        <stringProp name="HTTPSampler.domain"></stringProp>
+        <stringProp name="HTTPSampler.port"></stringProp>
+        <stringProp name="HTTPSampler.protocol"></stringProp>
+        <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+        <stringProp name="HTTPSampler.path"></stringProp>
+        <boolProp name="HTTPSampler.image_parser">true</boolProp>
+        <boolProp name="HTTPSampler.concurrentDwn">true</boolProp>
+        <stringProp name="HTTPSampler.concurrentPool">6</stringProp>
+        <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+        <stringProp name="HTTPSampler.response_timeout"></stringProp>
+      </ConfigTestElement>
+      <hashTree/>
+      <DNSCacheManager guiclass="DNSCachePanel" testclass="DNSCacheManager" testname="DNS Cache Manager" enabled="true">
+        <collectionProp name="DNSCacheManager.servers"/>
+        <boolProp name="DNSCacheManager.clearEachIteration">true</boolProp>
+        <boolProp name="DNSCacheManager.isCustomResolver">false</boolProp>
+      </DNSCacheManager>
+      <hashTree/>
+      <AuthManager guiclass="AuthPanel" testclass="AuthManager" testname="HTTP Authorization Manager" enabled="true">
+        <collectionProp name="AuthManager.auth_list"/>
+        <boolProp name="AuthManager.controlledByThreadGroup">false</boolProp>
+      </AuthManager>
+      <hashTree/>
+      <CookieManager guiclass="CookiePanel" testclass="CookieManager" testname="HTTP Cookie Manager" enabled="true">
+        <collectionProp name="CookieManager.cookies"/>
+        <boolProp name="CookieManager.clearEachIteration">true</boolProp>
+        <boolProp name="CookieManager.controlledByThreadGroup">false</boolProp>
+      </CookieManager>
+      <hashTree/>
+      <CacheManager guiclass="CacheManagerGui" testclass="CacheManager" testname="HTTP Cache Manager" enabled="true">
+        <boolProp name="clearEachIteration">true</boolProp>
+        <boolProp name="useExpires">false</boolProp>
+        <boolProp name="CacheManager.controlledByThread">false</boolProp>
+      </CacheManager>
+      <hashTree/>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Thread Group" enabled="true">
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" enabled="true">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <stringProp name="LoopController.loops">1</stringProp>
+        </elementProp>
+        <stringProp name="ThreadGroup.num_threads">1</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">1</stringProp>
+        <boolProp name="ThreadGroup.scheduler">false</boolProp>
+        <stringProp name="ThreadGroup.duration">0</stringProp>
+        <stringProp name="ThreadGroup.delay">0</stringProp>
+        <boolProp name="ThreadGroup.same_user_on_next_iteration">true</boolProp>
+      </ThreadGroup>
+      <hashTree>
+        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="Test" enabled="true">
+          <boolProp name="TransactionController.includeTimers">false</boolProp>
+          <boolProp name="TransactionController.parent">false</boolProp>
+        </TransactionController>
+        <hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://bookqa2.jetblue.com/B6/webqtrip.html" enabled="true">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="journeySpan" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">journeySpan</stringProp>
+                  <stringProp name="Argument.value">RT</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+                <elementProp name="jbBookerCurrency-getaway" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">jbBookerCurrency-getaway</stringProp>
+                  <stringProp name="Argument.value">usd</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+                <elementProp name="origin" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">origin</stringProp>
+                  <stringProp name="Argument.value">JFK</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+                <elementProp name="destination" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">destination</stringProp>
+                  <stringProp name="Argument.value">BOS</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+                <elementProp name="jbBookerSearchType" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">jbBookerSearchType</stringProp>
+                  <stringProp name="Argument.value">flights</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+                <elementProp name="returnDate" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">returnDate</stringProp>
+                  <stringProp name="Argument.value">2020-06-26</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+                <elementProp name="X-1ItxWO9i-z" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">X-1ItxWO9i-z</stringProp>
+                  <stringProp name="Argument.value">q</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+                <elementProp name="fareDisplay" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">fareDisplay</stringProp>
+                  <stringProp name="Argument.value">lowest</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+                <elementProp name="pos" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">pos</stringProp>
+                  <stringProp name="Argument.value">JETBLUEWEB_US</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+                <elementProp name="jbBookerCurrency-flights" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">jbBookerCurrency-flights</stringProp>
+                  <stringProp name="Argument.value">usd</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+                <elementProp name="numChildren" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">numChildren</stringProp>
+                  <stringProp name="Argument.value">0</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+                <elementProp name="refundable" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">refundable</stringProp>
+                  <stringProp name="Argument.value">false</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+                <elementProp name="departureDate" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">departureDate</stringProp>
+                  <stringProp name="Argument.value">2020-06-24</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+                <elementProp name="lang" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">lang</stringProp>
+                  <stringProp name="Argument.value">en</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+                <elementProp name="coupon" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">coupon</stringProp>
+                  <stringProp name="Argument.value"></stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+                <elementProp name="numAdults" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">numAdults</stringProp>
+                  <stringProp name="Argument.value">1</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+                <elementProp name="X-1ItxWO9i-d" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">X-1ItxWO9i-d</stringProp>
+                  <stringProp name="Argument.value">AAaixIihDKGOocGASZAQjICChCItkowi-ZkoLh4L3FcWhbW0AEodEA6qNgOq-UAOotioTrE</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+                <elementProp name="searchType" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">searchType</stringProp>
+                  <stringProp name="Argument.value">NORMAL</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+                <elementProp name="X-1ItxWO9i-f" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">X-1ItxWO9i-f</stringProp>
+                  <stringProp name="Argument.value">A0TjwOZyAQAAss8m3zpPiJlOq0zJbCuEkHeLNc1qAU-mNxE2nPCyLs1smxi0AZ0kCxyucnW8wH8AAEB3AAAAAA==</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+                <elementProp name="flexibleSearch" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">flexibleSearch</stringProp>
+                  <stringProp name="Argument.value">TRUE</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+                <elementProp name="roundTripFaresFlag" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">roundTripFaresFlag</stringProp>
+                  <stringProp name="Argument.value">false</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+                <elementProp name="X-1ItxWO9i-a" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">X-1ItxWO9i-a</stringProp>
+                  <stringProp name="Argument.value">6fiIzVcAwhhste=EyCZO6Z8m5wlEIx64Nioa_gPKSXhM5NYFuNzhwyjZWMk5IyNOF8_XyZub9cE=eUWD_Nxen-Gepm9_BzvS-mHcPmJ_=7qy3GDYj7ct6B0VO_VuCpOkYMHBqljFR6VpL8c_oXNnaQUkmypupQbSQ5=mIpNKjlWibqyH04lwADMgkVCoD_KOfBjEwA27xEZOFnw2pgMZD4zgun5NBsaHP0Vnb-PsE4Qt6glrJXdtKdGVr7Kd0_CIcYSr2_WWxgA6Sx9JIosL2x-svJoUhzpt4zaJv8Qd4RPHbyavwnux0LfGP4B=0J_yyz_iGbB8AdDI2x9enFZYLFjMwKa8mUbGN-8TWtY3v8xU66cDmPvQuEB0rGFEn_mXCatoCcgizSnVq-ULA7vv9Nkdn3CbLo6y5bfpACj-z_=A7qYrembf=Bj9Zx88aTbnCPh37NAYJ0j5He=ewWr2iJyKnjjPywr8jHkIQVG3exwViBirf0n6RufYxtwMe2qxPN_FxaYsjdeNxGO-vD_erq4_dr7q-K_dHXfd_z72rTIT3A755tMIqjVkstUrrO-uOmTRCEBS=DAXnOyaPblklVUyVMavGaBuGSj32UrDxFzJLyimFMg=HHE5cwpoFRd7jmKZF3Z=7_dmAKT-s-f4yIPjVJndix0Eu5BdZWFpH3b3iQPzKyw-JnXvTZnZJ=L3z3Af4uIGHRzlZnWBiVfd3-TAHvZQE8CwyzTlHHucOOc6SMa9BYFMoTsuxQSEoijnC78JEAkwx4TQXCly2Q=sGh73Mq3UiNVDjg8_acAJw7r90oRbGRrE7JuU_BM35W8P3sByjovDGqWPzeh3JEo38sPC8nwOQMWbGk2DssEQNejMGJyla9ZdMsg6KrZT54xa0je0JF8j6avCCoGgu5TecJd-yL2YVqOCJDBkKfo72GhU85roLsYn4kmIiHF9IPYJt2ebQ3mq_OEnUNvxFuERRpt9U3IgzablO4Gt2t746VS7aaAW9JjiflahsvrU05e8a0gS7Q4aIXTi0bFCoP=5TShvEy3AhihinY-WgDNkN-keDh-Huqp4q-aazaaHUidNmWtzuByfQLWfWAtZAwgHzR=_5d=SvpIY509REvOllHXBMohnaIP__C4OifJePs0jhkMY5EsQli5mhM5fzT6UyysMyZkLPT4=5qtKLt3JljIad6THlUKcHOV2imA6HPgtj=AaBQY4oSJ=pjczo7oddXdR_NsHKD-KDZvzwq5sB6=vEQL8Th7yx=VulvxwvFL4gQfVVqob0kx4pFmlrjC9TtW_mLdz9ydXwuybgzetfTYQL4J8upCrqlBIO=XI3XzfRM4IS4-iRxvqxFSBYIIfnLNCncjvK8OGDETaJLwHpUkFrTyiT2AmWaH07HEZje8fNisUUQRyriPwVD0wUPcqdmSbhsdDqoRgEmbWaHJwS9jRkKAaP-qkB7BP2tvyiPbCKOaga6iF8vqAPjladb8ypAHngRZMXGCcjz6_eKOZ_NUpeA8ShGyADUrtpd9FLXVZ3Rd6eauxcsg8hu8ndvzN2sK32tBEH0pZ-O_ZJhjqwk_pLeNv8esUvDxj8wVYdY5GVFhkE0ADnSGvVbVXALk5va-OZaGr2C8o08FUrgWfVabaaDJJkgwfC7BvRLi7PbERIOeoNpRo6zv0RAm=HuSHlcFVLxR35BZ9UzxcvJrVYwRdFtfnWV0ueMwd0oA424sV88sOKvITC=qI3g_uCitqQpa3M05cfndRWUm5Tdy4fsP3wcuQNkVszrryHtmneKE2QPBXKvc-5xdSDK3zi2bj9g6pmV98G4kCiI7QFvnChU9hoclvDp9NaIkAiyz7QxeFNKvgnK=3_x7TEbnFOTHIHidv6cC9bH9WvfaRQ5BoyC4HXoN8c4LTImmoeMe_46wrOpr_3Rk5N8sbKj-LYee-nirO2i_HXuYZUHmPK-y9tsCypOCmFy5SdB4bXybtwAsBvlY03rSoPOP5073kXltY--LKElEILtpPRLNb8G2inM08OuBVZPllqpWh68WAZGAO=IYuSkuSswo9M5ak3bHRlyrIFxDVdS0BTJ9eSqyqzqZigpkAxu2zlWaH4CH7b-Bo4BcBBiGEfuH6fij5MIyFtjha4oLiJ0Kxm7-yTA7PkLIofzWDmIaVhKJnO6XYtdJpAc7F6Wt0BGLL6DI7=msWFhwNQ3rskE0Wmp7UNV3PZaAbg_abUBLGRq=Qs8UnG2L8xVC4TleXmuREa5A3gcLINMjhrsesdlrdyesrqjogFotXzjZFyw0OBf2IhzQpWYLduQ7nRCX_DzH3euZFz0iXxtPC68aayZerRntxT3otLpSwOtGzd2xURzVDOKg6lzt838g7Tyv4wOS0Mjy-aOk8EPSY47ciyeLnVgYj7lJKhCUk4S5PrUcCG8hOneTrunV=jbdqrNnaI6gQa7kSDkNsx65oWzIkw7GxCXqpIf_NWGZAjdEXzE6TVZjFy0hdajijTt9nEzl3ARQ5sCFA86=M-2cfl=Co9UNKmtOEc3Ax-NlJZIUREJ-nHyxOm=3H5=UUgXBzevjI5ZSSPZfcUsLVfyod=G7dsd4rYGtgxiS0o=Wew7vV9qXbpgfgUB7dO-aUmQrycVVW88PBSIjhHPda=SpVneXY=qwZNo4ZLPxHjBFde=o0d_pT7O7BoGjUI-Jv_xgI-TQe44eCD42txsrCOZ5dph57I-wZ6xnSNWdO5YvXAb03zsOnomhlhx-Kw_vxWlfuk2YIQVn-jCLniGmH_ilWEqxztu_y0gOY85RwBBmy9fJoIZsbEn5Pm6F=h2x7ULhmNr7Js40qf6dp6cyAOqI-rjqnl6-tLvNNlB2itfTticTkFHQLjPZzj3agSqCBhnLgqK-XBLMO8FK4I6nDqHlC-aeMd9vr-WSN40pOnmyPpRiKMwtQZ6ln9WqnUflgDA29VNK5D64AMpnFTL5Sv8rNfFpVrImVFvydAaSfK_0OQ9uUomCj-2bQd4JKnDcYuTopqfcsLwuHQm80zuh2tNbu4iFXMcH-5e3rr=_zrC3r3tQH5X_G0smfmfLBZX46Yfk0rS6Dn0GX57KEdkz3PDkl57CPqe=tX8tV_WvUIXS9CJ3sw3creca9tb4KBgrR0Jrwkg3wtQmIregbaJLRFq9ECOBDd4Q9Z_Fux7e_RJ_G36fMCYfy7KJ-srFYNColpAdQI_3MTFW=0lDGeay4JDYOfEr7dlYNGhlXYRMIeP_tHxsOh5XbMcZ9xA5q0HOpDaY95QpOw2_zoh4o7e5jC-yeMTBe5I9bOZHwBCdbScUjJ99DTn2MAhrL-ovhnY5k6ALOso3kifXd=hAhVq2x_sW6uasTDpGfUpBmoXRF3_-twM2ABW9p6Iz0OmTRGmm0hYGqNNRZ=zdHc6wcCx3FPl7xVvoQqWhHWhP7hFuoejcwe9DFcDw2r3klCh-xgnNIr6AvPhOwScdAcNJRloyZo9TlxgEn-nlGKQMAobSULQJLoDrsKB=aXbu4JSbVh3333NLBSOIvXQ2YK52o5Eseu2alW5MZ9NER7wk4giCxCVGTAPGLs_5XkNw75L30g0rrrF5fyNfC2EFEgipI9BDXBZzj63W==82Yj3DA6T5p8hkJUbZdCzs4fLO2Z9cd9tI7=xbTL5XpqT6zC55hVVeY6L5CiP=gASYbQGLpMHkJgZjBJmXZy5CtOF-TD_pDZWyOZJqErARAgeeZJnYPUEC0-RNsA=n5PyBup26SeBCHvUV7DtVo0cl5E5gmXieBpzRyBGqY9SzpH7oVbUoiHpQoRHy78pq22wzQJE8_e7jDAVypwzNbQLEkXiqJKuSOwKHPFI=5=zHzSTaCOMvJVtG8KglS97o2OaPN-j3eMSXDWaVEHhZ_hktRoO7xm2JWTfOksLSyX7T0I6q_48aZ0DqPNYv=IB7PEj74YqZuTkQp-Z354YYH5X5jM4dKggFW7PoKkcqZdsXH=GC7C5Pzy0XXdsHAqw5kNHHbIsNA83P_OVn4NBz=AkoQh5pWCNsODTBLjFkclvaFrfxRnLZPkP0FjJIMRPMAxLeQtg_grg4f8fKu=OEiDDF4-ESFc2diar2eTEy-SVvPboKgI89TP92dY2E0y=hcdU3J64lmPqDqbn_smbK_K4zAIxmb0jhFq53dcndHi2JItmULKG0O7Pt9IHzCLZ3R5pAwoIv8G3knpRMDyW9lWMhCc8Tz0-iBeWgAPIdH0cEWAegBcQeYJyyxTROt7vZsdnBpEtjRcOijkI8a0wifAbhzoXd-iB5LI7Jos=BqZngvRex7zmlCyg5DK3NapK6tK4J5r3CBFRn07zguP0c28DrH0FGH46=T0Qh0QtAvAhZt7QwuyaVBq7RculMA5jEkTf5E7WXBA-6lIlBqZo5oduIZarmxRptuqCfDDZo6AKzLJv0UspBI487OltWYfpr889OK4jx_hnC3OB=0wZOmrbQBoc4odvxUPMge-jMSUVjFgDWdp00ppF5fXAR_mf3-JIFihS0lN485Hr6aIkUrRCjsPSQWDNWJQGWtEQROHtTj_aLh_7X7tdBAThB2YdXI6mRBfaOvsQU7AJ=TGX_oSyrYqBiIniT0zJQC3DLX=zJk73X_Ao4-7WciEoUwG-UgawSYyaAwrMF4gfC7MMiayaf9dJ68aPHav9b6yjtORBsBnX-oDiZ9-VDqDA5fk6x6icLIa2dsC0D9WTKZ4Xg40E3McIM5_H8HqDzSFP5oa_2uUmV2Q0j_LeHrUgXnUmzr5aPnDUAxskRhbP9M9ALwMPzxFi=49v8JkFvrwqfR8pu72I0aBDn7rVucC=Ic=TSq7rqJKo9QkC_2q7pRLSQfNchuAGl8Qif_99Q-HZ-pCFbK8XOSSIWIsnMiJaSj4u97ME7kBsjnajsgdEsfkETd9ZgS0X2jSfAPYGjxdDo733gKNZhTrYnGpav3mxfUf2Esx68jDcNownJLq=oQ-noWOMzl73ouLy6GktLPBCheUl0kpwV6OpuSFL4HJmJ9hhhUHFY4XAGEfDeMUYFbqHxfx42yitvIeYicwEERmZJMoT9v9sjpKq4bhzOsr=HKB7-fSC4oucF0HdbHnFTSWlGZ_FlOl3dQCcoruS5RqwZGIO_NjSQj6Cjz9CYqxGJKG2qw_KxmQM_pmrybK_Cntw8ODm0nrFupsxt7RuHyQD=-3hIA2bBejvHa8XjYClVeq-aujXVawEhJSAhrHFogup6EL8lL4vD9_ZdVoFGfggalwlPgc5wE-xwMCrqYlRJ=NgCgIEYIc-y=zJbHUpINkahQQAKvC6XnFqWNr6i3rK_0uvkKxShdJKTCtmt-cAYij=2-izxbF3OUeD_jouMdP8pb3O3zXWv=2DSsL=Q20o5tJGwqmM3dXLB0KebCdUi=AyUnieuqCQ40KS4NjhjAQ=REHbUKN9yHJx6aX-dq8u_ySg7rYYKlPB3Dx32uK4oltc-4-xSJjV74CTqlPWVwMcd7vqgTitE7FBA7Z=DzLLQyYlvcucXrqOVPsDagQsE6WDYnEGdpl7Sz3sCK9OVSaEoSYeBHO0LF4hSDkVj5csZNXLpgIyVwBHg_KrhHZkAfeA2i8fYfTkAOy6VewhXpGR-ahLFYCKLwq7c4AZGlOFwe4VcSW_lwFvmZtzPec=zUebMm5C4cWObTXNonuFyjDBTT-GbpdCvCyktIb2hYvxU4h5RoEI8j5yg9tg_0tv5ZRsJMxFL2-KIRX5TcbXbA=Z7g4y46daW=3Z7cOhbFs9NxbgDLwMUnTR-=n9EnDXZxLfMBF_Qao2Lbe7Z5N4oRphINDqLYNh9IiP8Y3J9XhN9AWxTwieZgWNrCkVZbMZmPI0KEBVjkQd=7aIGq_vOHwrpFJLwuNcmU9D55__xu9zSQMWMME2OpP3hBDyJgqb9Nd=ixiLGHl4eI=08ZkI6d8hoj2ghW8t79JZeF_lAjzNwMT8Y7Xfpa8F5iRoWebpkdUQaZyGlnOWBrDzXewH6YoQaJwJsc-h-NM_DfDqMCB7CfWK020Pv=FYL7K=m7a2emust4GJ_eT4x5qMaOXPvDCzZ9pABViQfu=2edPXgrlN2VS23G6zMMsZhwIpwMCSUySg4C-=Nk8OOql8W2tQYDyVwa8604Czqjw25kXnF6oGvHLDGHNkSdYciN3duA6h0Lup7</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+                <elementProp name="X-1ItxWO9i-c" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">X-1ItxWO9i-c</stringProp>
+                  <stringProp name="Argument.value">ACDiwOZyAQAA4j_oq0_g0zsGP4h3rD-rbFEXVQOvygS6ucvZrC2SjCL5mSgu</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+                <elementProp name="X-1ItxWO9i-b" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">X-1ItxWO9i-b</stringProp>
+                  <stringProp name="Argument.value">-adjh79</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+                <elementProp name="fareFamily" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">fareFamily</stringProp>
+                  <stringProp name="Argument.value">LOWESTFARE</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+                <elementProp name="numInfants" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">numInfants</stringProp>
+                  <stringProp name="Argument.value">0</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+                <elementProp name="sharedMarket" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">sharedMarket</stringProp>
+                  <stringProp name="Argument.value">false</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">${BASE_URL_1}</stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">B6/webqtrip.html</stringProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <UniformRandomTimer guiclass="UniformRandomTimerGui" testclass="UniformRandomTimer" testname="Uniform Random Timer" enabled="true">
+              <stringProp name="RandomTimer.range">0.0</stringProp>
+              <stringProp name="ConstantTimer.delay">0</stringProp>
+              <stringProp name="TestPlan.comments">Recorded time was 0 milliseconds</stringProp>
+            </UniformRandomTimer>
+            <hashTree/>
+          </hashTree>
+        </hashTree>
+      </hashTree>
+    </hashTree>
+  </hashTree>
+</jmeterTestPlan>
